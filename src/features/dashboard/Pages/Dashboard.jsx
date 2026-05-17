@@ -30,7 +30,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 
 import { useAuth } from "../../auth/hooks/useAuth";
-import { analyzeResume, downloadAtsResume } from "../../Resume/services/resume.api";
+import { analyzeResume, downloadAtsResume } from "../../resume/services/resume.api"
 
 const navItems = [
   { id: "dashboard", label: "Dashboard", icon: Home },
