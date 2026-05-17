@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ai-resume-analysis-be.vercel.app",
+  baseURL: "https://ai-resume-analysis-be.vercel.app/api",
   withCredentials: true,
 });
 
