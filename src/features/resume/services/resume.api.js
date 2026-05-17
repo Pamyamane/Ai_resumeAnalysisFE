@@ -5,6 +5,15 @@ const api = axios.create({
   withCredentials: true,
 });
 
+// Send token in every request
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
 export const analyzeResume = async ({ resume, jobDescription, targetRole }) => {
   const formData = new FormData();
   formData.append("resume", resume);

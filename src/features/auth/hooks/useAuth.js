@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { Authcontex } from "../auth.context";
-
 import { login, register, logout, getuser } from "../services/auth.api";
 
 export const useAuth = () => {
@@ -34,6 +33,7 @@ export const useAuth = () => {
       setLoading(true);
       const data = await logout();
       setUser(null);
+      localStorage.removeItem("token"); // ← clear token
       return data;
     } finally {
       setLoading(false);
