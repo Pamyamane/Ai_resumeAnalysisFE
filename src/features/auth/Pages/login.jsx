@@ -34,7 +34,8 @@ export default function Login() {
 
 const googleLogin = () => {
 
-   const CLIENT_ID = 278874444078-h2v31vq7hrud57csr3pa7dojcv9jaabp.apps.googleusercontent.com;
+ 
+   const CLIENT_ID = "278874444078-h2v31vq7hrud57csr3pa7dojcv9jaabp.apps.googleusercontent.com";
 
   const redirectUri =
     "https://ai-resume-analysis-be.vercel.app/auth/google/callback";
